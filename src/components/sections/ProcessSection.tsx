@@ -8,12 +8,11 @@ export function ProcessSection() {
         <SectionReveal className="col-span-12 lg:sticky lg:top-28 lg:col-span-4 lg:self-start">
           <p className="section-kicker">Процесс</p>
           <h2 className="section-title max-w-[10ch]">
-            От идеи или чертежей до монтажа на объекте.
+            Сначала проверяем проект. Потом производим.
           </h2>
           <p className="section-copy mt-8 max-w-lg">
-            Мы подключаемся на этапе идеи, дизайн-проекта или готовой рабочей
-            документации. Проверяем конструктив, согласуем материалы и ведем
-            изделие до установки.
+            Так меньше переделок, нервов и решений в последний момент. Мы
+            заранее видим узлы, материалы, логистику и монтажную последовательность.
           </p>
           <div
             aria-hidden="true"
@@ -36,7 +35,7 @@ export function ProcessSection() {
                   {index + 1}
                 </span>
                 <p className="technical-label">{String(index + 1).padStart(2, "0")}</p>
-                <h3 className="mt-4 font-display text-3xl leading-none tracking-display">
+                <h3 className="mt-4 font-display text-3xl leading-[1.08] tracking-display">
                   {step.title}
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-[var(--stone-muted)] md:text-base md:leading-8">

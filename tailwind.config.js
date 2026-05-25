@@ -11,10 +11,11 @@ export default {
       },
       fontFamily: {
         sans: ['"Manrope"', "system-ui", "sans-serif"],
-        display: ['"Roundex"', '"Manrope"', "sans-serif"],
+        display: ['"Manrope"', "sans-serif"],
+        brand: ['"Roundex"', '"Manrope"', "sans-serif"],
       },
       letterSpacing: {
-        display: "-0.08em",
+        display: "-0.035em",
       },
       transitionTimingFunction: {
         editorial: "cubic-bezier(0.22, 1, 0.36, 1)",

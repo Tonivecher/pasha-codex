@@ -84,7 +84,7 @@ export function MagneticButton({
     <button
       ref={buttonRef}
       className={cn(
-        "inline-flex min-h-11 items-center justify-center gap-3 rounded-sm bg-[var(--stone-100)] px-5 py-3 text-[0.68rem] font-bold uppercase tracking-[0.26em] text-[var(--graphite-950)] transition-[transform,background-color,color,border-color] duration-300 ease-editorial hover:bg-[var(--stone-300)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--lime-accent)] disabled:pointer-events-none disabled:opacity-45 md:min-h-[3.25rem] md:px-6",
+        "inline-flex min-h-11 items-center justify-center gap-3 rounded-sm bg-[var(--stone-100)] px-5 py-3 text-[0.72rem] font-bold uppercase tracking-[0.14em] text-[var(--graphite-950)] transition-[transform,background-color,color,border-color] duration-300 ease-editorial hover:bg-[var(--stone-300)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--lime-accent)] disabled:pointer-events-none disabled:opacity-45 md:min-h-[3.25rem] md:px-6",
         className,
       )}
       data-cursor="interactive"

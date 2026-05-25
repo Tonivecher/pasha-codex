@@ -64,7 +64,7 @@ export function SiteHeader() {
           <span className="block text-[0.58rem] font-bold uppercase tracking-[0.34em] text-[var(--stone-muted)]">
             architectural production
           </span>
-          <span className="mt-1 block truncate font-display text-xl tracking-display text-[var(--stone-100)] transition group-hover:text-[var(--brass-400)] md:text-2xl">
+          <span className="mt-1 block truncate font-brand text-xl tracking-[-0.055em] text-[var(--stone-100)] transition group-hover:text-[var(--brass-400)] md:text-2xl">
             {studioName}
           </span>
         </button>
@@ -78,7 +78,7 @@ export function SiteHeader() {
               key={item.id}
               type="button"
               onClick={() => handleNavigate(`#${item.id}`)}
-              className="min-h-11 text-[0.64rem] font-bold uppercase tracking-[0.26em] text-[var(--stone-muted)] transition hover:text-[var(--stone-100)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--lime-accent)]"
+              className="min-h-11 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-[var(--stone-muted)] transition hover:text-[var(--stone-100)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--lime-accent)]"
               data-cursor="interactive"
             >
               {item.label}
@@ -126,7 +126,7 @@ export function SiteHeader() {
                   key={item.id}
                   type="button"
                   onClick={() => handleNavigate(`#${item.id}`)}
-                  className="flex min-h-12 items-center justify-between border-b border-[var(--line-soft)] py-3 text-left text-sm font-bold uppercase tracking-[0.2em] text-[var(--stone-100)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--lime-accent)]"
+                  className="flex min-h-12 items-center justify-between border-b border-[var(--line-soft)] py-3 text-left text-sm font-bold uppercase tracking-[0.12em] text-[var(--stone-100)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--lime-accent)]"
                   data-cursor="interactive"
                 >
                   {item.label}

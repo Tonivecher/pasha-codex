@@ -9,14 +9,14 @@ export function MaterialsSection() {
           <SectionReveal className="col-span-12 lg:col-span-5">
             <p className="section-kicker">Материалы и узлы</p>
             <h2 className="section-title max-w-[12ch]">
-              Премиальность читается в стыке, кромке и ресурсе.
+              Дорогой вид начинается с узла, а не с лака.
             </h2>
           </SectionReveal>
           <SectionReveal className="col-span-12 lg:col-span-5 lg:col-start-8 lg:self-end">
             <p className="section-copy max-w-xl">
-              Материал выбирается не по картинке. Он должен выдерживать
-              эксплуатацию, сохранять оттенок, аккуратно стыковаться и давать
-              нужное ощущение в интерьере.
+              Один и тот же шпон, металл или камень может выглядеть по-разному.
+              Поэтому мы смотрим на стык, кромку, свет, нагрузку и то, как
+              поверхность будет стареть.
             </p>
           </SectionReveal>
         </div>
@@ -44,7 +44,7 @@ export function MaterialsSection() {
                 <p className="technical-label text-[var(--brass-400)]">
                   {material.eyebrow}
                 </p>
-                <h3 className="mt-5 font-display text-3xl leading-none tracking-display">
+                <h3 className="mt-5 font-display text-3xl leading-[1.08] tracking-display">
                   {material.title}
                 </h3>
                 <p className="mt-5 text-sm leading-7 text-[var(--stone-muted)]">

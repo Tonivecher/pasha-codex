@@ -13,7 +13,7 @@ export function CapabilitiesSection() {
         <SectionReveal className="max-w-5xl">
           <p className="section-kicker">Что производим</p>
           <h2 className="section-title max-w-[15ch]">
-            Архитектурная мебель, встроенные системы и изделия вне каталога.
+            Производим то, что должно встать точно и служить долго.
           </h2>
         </SectionReveal>
 
@@ -32,7 +32,7 @@ export function CapabilitiesSection() {
                   aria-hidden="true"
                 />
               </div>
-              <h3 className="mt-8 font-display text-3xl leading-none tracking-display">
+              <h3 className="mt-8 font-display text-3xl leading-[1.08] tracking-display">
                 {item.title}
               </h3>
               <p className="mt-5 text-sm leading-7 text-[var(--stone-muted)]">
@@ -58,7 +58,7 @@ export function CapabilitiesSection() {
                 onClick={() => scrollTo("#contact", { offset: -72 })}
                 data-cursor="interactive"
               >
-                Оценить проект
+                Отправить на оценку
               </button>
             </SectionReveal>
           ))}

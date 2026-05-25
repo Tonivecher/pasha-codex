@@ -114,11 +114,11 @@ export function ContactSection() {
         <SectionReveal className="col-span-12 lg:col-span-5">
           <p className="section-kicker">Проектный бриф</p>
           <h2 className="section-title max-w-[11ch]">
-            Отправьте задачу на первичную оценку.
+            Расскажите, что нужно произвести.
           </h2>
           <p className="section-copy mt-8 max-w-xl">
-            Приложите описание, чертежи или визуализации позже в почтовом
-            клиенте. Сейчас форма подготовит письмо со структурой проекта.
+            Форма соберет письмо с ключевыми вводными. Чертежи, визуализации и
+            ссылки на папку можно добавить уже в почтовом клиенте.
           </p>
 
           <div className="mt-12 grid gap-6">
@@ -222,7 +222,7 @@ export function ContactSection() {
                 name="productionScope"
                 value={values.productionScope}
                 onChange={handleChange("productionScope")}
-                placeholder="Кухня, панели, ресепшн, booth-модули, витрины..."
+                placeholder="Кухня, панели, ресепшн, booth-модули, витрины…"
                 data-cursor="interactive"
               />
               {errors.productionScope ? (
@@ -276,7 +276,7 @@ export function ContactSection() {
               </MagneticButton>
               <p className="max-w-md text-sm leading-7 text-[var(--stone-subtle)]">
                 Сейчас откроется почтовый клиент с подготовленным брифом.
-                Backend можно подключить позже без смены сценария формы.
+                Позже сюда можно подключить отправку через API.
               </p>
             </div>
 

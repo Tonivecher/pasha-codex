@@ -70,6 +70,7 @@
     background: var(--graphite-950);
     color: var(--stone-100);
     font-family: "Manrope", sans-serif;
+    font-size-adjust: from-font;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -88,9 +89,10 @@
   h5,
   h6 {
     margin: 0;
-    font-family: "Roundex", "Manrope", sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.06em;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
     text-wrap: balance;
   }
 
@@ -202,23 +204,23 @@
   }
 
   .section-kicker {
-    @apply text-[0.66rem] font-bold uppercase tracking-[0.32em] text-[var(--stone-subtle)];
+    @apply text-[0.68rem] font-bold uppercase tracking-[0.14em] text-[var(--stone-subtle)];
   }
 
   .section-title {
-    @apply mt-5 max-w-[13ch] font-display text-[clamp(2.35rem,1.4rem+4.6vw,6.4rem)] leading-[0.94] tracking-display;
+    @apply mt-5 max-w-[14ch] font-display text-[clamp(2.25rem,1.3rem+4vw,5.8rem)] leading-[1.02] tracking-display;
   }
 
   .section-copy {
-    @apply text-base leading-8 text-[var(--stone-muted)] md:text-lg md:leading-9;
+    @apply max-w-[65ch] text-[1.0625rem] leading-[1.62] text-[var(--stone-muted)] md:text-lg;
   }
 
   .technical-label {
-    @apply text-[0.62rem] font-bold uppercase tracking-[0.26em] text-[var(--stone-subtle)];
+    @apply text-[0.66rem] font-bold uppercase tracking-[0.12em] text-[var(--stone-subtle)];
   }
 
   .section-link {
-    @apply inline-flex min-h-11 items-center gap-3 text-[0.68rem] font-bold uppercase tracking-[0.26em] text-[var(--stone-muted)] transition duration-300 ease-editorial hover:text-[var(--stone-100)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--lime-accent)];
+    @apply inline-flex min-h-11 items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.14em] text-[var(--stone-muted)] transition duration-300 ease-editorial hover:text-[var(--stone-100)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--lime-accent)];
   }
 
   .image-monochrome {

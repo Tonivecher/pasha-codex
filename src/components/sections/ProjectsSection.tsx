@@ -42,14 +42,13 @@ export function ProjectsSection() {
           <SectionReveal className="col-span-12 lg:col-span-6">
             <p className="section-kicker">Избранные объекты</p>
             <h2 className="section-title max-w-[12ch]">
-              Не галерея, а задачи, материалы и результат.
+              Показываем не картинки, а задачи и решения.
             </h2>
           </SectionReveal>
           <SectionReveal className="col-span-12 lg:col-span-5 lg:col-start-8 lg:self-end">
             <p className="section-copy max-w-xl">
-              Каждый объект смотрим через scope: что нужно было произвести, из
-              каких материалов, какие узлы важны и как изделие работает в
-              пространстве.
+              В каждом проекте важен не только вид. Важно, что изделие должно
+              выдержать, как оно монтируется и какую роль играет в пространстве.
             </p>
           </SectionReveal>
         </div>
@@ -95,7 +94,7 @@ export function ProjectsSection() {
                 </div>
 
                 <div className="absolute inset-x-0 bottom-0 p-5 md:p-7">
-                  <h3 className="max-w-[14ch] font-display text-[clamp(1.8rem,1.1rem+2.8vw,3.5rem)] leading-[0.96] tracking-display">
+                  <h3 className="max-w-[15ch] font-display text-[clamp(1.75rem,1.1rem+2.4vw,3.2rem)] leading-[1.04] tracking-display">
                     {project.title}
                   </h3>
                   <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--stone-muted)] md:text-base md:leading-8">

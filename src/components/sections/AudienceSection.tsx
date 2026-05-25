@@ -8,13 +8,13 @@ export function AudienceSection() {
         <div className="grid grid-cols-12 gap-y-8">
           <SectionReveal className="col-span-12 lg:col-span-6">
             <p className="section-kicker">Для кого</p>
-            <h2 className="section-title">Производство, которое входит в проектную логику.</h2>
+            <h2 className="section-title">Для тех, кому нужна мебель без сюрпризов на монтаже.</h2>
           </SectionReveal>
           <SectionReveal className="col-span-12 lg:col-span-5 lg:col-start-8 lg:self-end">
             <p className="section-copy max-w-xl">
-              Мы подключаемся к проектам, где важны пропорция, материал,
-              инженерная дисциплина, точный монтаж и спокойная коммуникация
-              между автором интерьера, заказчиком и производством.
+              Хорошая мебель на заказ начинается не в цехе, а в разговоре о
+              сценарии, нагрузке, материале и точке, где изделие должно точно
+              встать в интерьер.
             </p>
           </SectionReveal>
         </div>
@@ -28,7 +28,7 @@ export function AudienceSection() {
               className="scroll-fade bg-[rgba(17,17,15,0.78)] p-5 md:p-7"
             >
               <p className="technical-label">0{index + 1}</p>
-              <h3 className="mt-6 font-display text-3xl leading-none tracking-display text-[var(--stone-100)]">
+              <h3 className="mt-6 font-display text-3xl leading-[1.08] tracking-display text-[var(--stone-100)]">
                 {segment.title}
               </h3>
               <p className="mt-5 text-sm leading-7 text-[var(--stone-muted)]">

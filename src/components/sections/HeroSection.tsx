@@ -53,13 +53,13 @@ export function HeroSection() {
           <p className="section-kicker text-[var(--brass-400)]">
             Architectural furniture production
           </p>
-          <h1 className="mt-5 max-w-[11ch] overflow-wrap-anywhere font-display text-[clamp(2.72rem,1.35rem+6.6vw,9.2rem)] leading-[0.86] tracking-display">
-            Премиальная мебель и интерьерные изделия по проектам архитекторов
+          <h1 className="mt-5 max-w-[12ch] overflow-wrap-anywhere font-display text-[clamp(2.65rem,1.55rem+5.8vw,8.6rem)] leading-[0.96] tracking-display">
+            Мебель на заказ, которая встает в интерьер как архитектура
           </h1>
-          <p className="mt-7 max-w-3xl text-lg leading-8 text-[var(--stone-muted)] md:text-2xl md:leading-10">
-            Производим встроенные системы, HoReCa- и retail-мебель, панели,
-            стойки, витрины и сложные столярные изделия — от инженерной
-            проработки до монтажа на объекте.
+          <p className="mt-7 max-w-3xl text-lg leading-[1.62] text-[var(--stone-muted)] md:text-[1.45rem]">
+            Производим встроенные системы, кухни, панели, стойки, витрины и
+            мебель для HoReCa и retail — с инженерной проработкой, понятной
+            сметой и монтажом на объекте.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
@@ -103,7 +103,7 @@ export function HeroSection() {
                 className="border-t border-[var(--line-soft)] pt-4 first:border-t-0 first:pt-0 sm:first:border-t sm:first:pt-4 lg:first:border-t-0 lg:first:pt-0"
               >
                 <p className="technical-label">0{index + 1}</p>
-                <h2 className="mt-2 font-display text-xl leading-tight tracking-display text-[var(--stone-100)]">
+                <h2 className="mt-2 font-display text-xl leading-[1.08] tracking-display text-[var(--stone-100)]">
                   {proof.title}
                 </h2>
                 <p className="mt-3 text-sm leading-7 text-[var(--stone-muted)]">
