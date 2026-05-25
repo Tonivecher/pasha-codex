@@ -40,43 +40,45 @@
 @layer base {
   :root {
     color-scheme: dark;
-    --color-black: #0a0a0a;
-    --color-white: #f4f1eb;
-    --color-graphite: #1a1a1a;
-    --color-graphite-soft: #222222;
-    --color-chrome: rgba(72, 74, 78, 0.16);
-    --color-muted: rgba(244, 241, 235, 0.68);
-    --color-subtle: rgba(244, 241, 235, 0.48);
-    --color-line: rgba(244, 241, 235, 0.1);
-    --section-space: clamp(5rem, 8vw, 8.5rem);
-    --container-padding: clamp(1.25rem, 3vw, 2.75rem);
-  }
-
-  * {
-    box-sizing: border-box;
+    --graphite-950: #070706;
+    --graphite-900: #11110f;
+    --stone-100: #f3eee5;
+    --stone-300: #c9bdaa;
+    --walnut-500: #8a6242;
+    --brass-400: #c5a46d;
+    --lime-accent: #d7ff3f;
+    --stone-muted: rgba(243, 238, 229, 0.64);
+    --stone-subtle: rgba(243, 238, 229, 0.42);
+    --line-soft: rgba(243, 238, 229, 0.12);
+    --line-strong: rgba(243, 238, 229, 0.22);
+    --section-space: clamp(5rem, 9vw, 9rem);
+    --container-padding: clamp(1rem, 3vw, 2.75rem);
+    --header-height: 5rem;
   }
 
   html {
+    overflow-x: clip;
     scroll-behavior: auto;
-    background: var(--color-black);
+    background: var(--graphite-950);
   }
 
   body {
     margin: 0;
     min-width: 320px;
-    min-height: 100vh;
-    background: var(--color-black);
-    color: var(--color-white);
-    font-family: "Manrope", system-ui, sans-serif;
+    min-height: 100dvh;
+    overflow-x: clip;
+    background: var(--graphite-950);
+    color: var(--stone-100);
+    font-family: "Manrope", sans-serif;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
   }
 
   #root {
-    min-height: 100vh;
+    min-height: 100dvh;
   }
 
   h1,
@@ -89,10 +91,12 @@
     font-family: "Roundex", "Manrope", sans-serif;
     font-weight: 400;
     letter-spacing: -0.06em;
+    text-wrap: balance;
   }
 
   p {
     margin: 0;
+    text-wrap: pretty;
   }
 
   a {
@@ -102,6 +106,7 @@
 
   button,
   input,
+  select,
   textarea {
     color: inherit;
     font: inherit;
@@ -114,39 +119,53 @@
   }
 
   input,
+  select,
   textarea {
     width: 100%;
-    border: 0;
-    border-bottom: 1px solid var(--color-line);
-    background: transparent;
-    border-radius: 0;
-    padding: 0 0 1rem;
-    color: var(--color-white);
+    border: 1px solid var(--line-soft);
+    background: rgba(17, 17, 15, 0.58);
+    border-radius: 2px;
+    color: var(--stone-100);
     outline: none;
-    caret-color: var(--color-white);
+    caret-color: var(--stone-100);
     transition:
       border-color 200ms ease,
+      background-color 200ms ease,
       color 200ms ease;
+  }
+
+  input,
+  select {
+    min-height: 3.25rem;
+    padding: 0 0.95rem;
+  }
+
+  textarea {
+    min-height: 8.5rem;
+    resize: vertical;
+    padding: 0.95rem;
   }
 
   input::placeholder,
   textarea::placeholder {
-    color: rgba(244, 241, 235, 0.38);
+    color: rgba(243, 238, 229, 0.34);
   }
 
   input:focus,
+  select:focus,
   textarea:focus {
-    border-color: rgba(244, 241, 235, 0.62);
+    border-color: var(--stone-300);
+    background: rgba(17, 17, 15, 0.78);
   }
 
-  textarea {
-    resize: vertical;
-    min-height: 9.5rem;
+  :focus-visible {
+    outline: 2px solid var(--lime-accent);
+    outline-offset: 4px;
   }
 
   ::selection {
-    background: rgba(244, 241, 235, 0.16);
-    color: var(--color-white);
+    background: rgba(197, 164, 109, 0.32);
+    color: var(--stone-100);
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -155,48 +174,107 @@
     a,
     button,
     input,
+    select,
     textarea,
     label {
       cursor: none;
+    }
+  }
+
+  @media (pointer: coarse) {
+    button,
+    a,
+    input,
+    select,
+    textarea {
+      min-height: 44px;
     }
   }
 }
 
 @layer components {
   .page-grid {
-    @apply mx-auto w-full max-w-[1440px] px-5 md:px-8 xl:px-10;
+    @apply mx-auto w-full max-w-[1480px] px-4 sm:px-6 lg:px-8 xl:px-10;
   }
 
   .section-rule {
-    @apply border-t border-white/10;
+    border-top: 1px solid var(--line-soft);
   }
 
   .section-kicker {
-    @apply text-[0.68rem] font-semibold uppercase tracking-[0.38em] text-white/50;
+    @apply text-[0.66rem] font-bold uppercase tracking-[0.32em] text-[var(--stone-subtle)];
   }
 
   .section-title {
-    @apply mt-5 max-w-[14ch] font-display text-[clamp(2.6rem,6vw,5.8rem)] leading-[0.94] tracking-display;
+    @apply mt-5 max-w-[13ch] font-display text-[clamp(2.35rem,1.4rem+4.6vw,6.4rem)] leading-[0.94] tracking-display;
   }
 
   .section-copy {
-    @apply text-base leading-8 text-white/70 md:text-lg md:leading-9;
+    @apply text-base leading-8 text-[var(--stone-muted)] md:text-lg md:leading-9;
+  }
+
+  .technical-label {
+    @apply text-[0.62rem] font-bold uppercase tracking-[0.26em] text-[var(--stone-subtle)];
   }
 
   .section-link {
-    @apply inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-white/70 transition duration-300 ease-editorial hover:text-white;
+    @apply inline-flex min-h-11 items-center gap-3 text-[0.68rem] font-bold uppercase tracking-[0.26em] text-[var(--stone-muted)] transition duration-300 ease-editorial hover:text-[var(--stone-100)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--lime-accent)];
   }
 
   .image-monochrome {
-    filter: grayscale(1) saturate(0) contrast(1.12) brightness(0.76);
+    filter: grayscale(0.82) saturate(0.76) contrast(1.08) brightness(0.78);
   }
 
   .media-surface {
-    @apply overflow-hidden rounded-md bg-black/25;
+    @apply overflow-hidden rounded-sm bg-[rgba(17,17,15,0.7)];
   }
 
   .field-error {
-    @apply mt-3 text-sm text-white/60;
+    @apply mt-2 text-sm leading-6 text-[var(--brass-400)];
+  }
+
+  .technical-card {
+    @apply border border-[var(--line-soft)] bg-[rgba(17,17,15,0.68)] backdrop-blur-md;
+  }
+
+  .overflow-wrap-anywhere {
+    overflow-wrap: anywhere;
+  }
+}
+
+@supports ((animation-timeline: view()) and (animation-range: entry)) {
+  .scroll-fade {
+    animation: scroll-fade both;
+    animation-timeline: view();
+    animation-range: entry 12% cover 32%;
+  }
+
+  @keyframes scroll-fade {
+    from {
+      opacity: 0.55;
+      transform: translateY(1.5rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+
+  .scroll-fade {
+    animation: none !important;
   }
 }
 
